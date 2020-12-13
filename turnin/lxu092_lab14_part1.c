@@ -1,7 +1,7 @@
 /*	Author: lab
  *  Partner(s) Name: Luofeng Xu
  *	Lab Section:
- *	Assignment: Lab #  Exercise #
+ *	Assignment: Lab 14  Exercise 1
  *	Exercise Description: I've put two state machine in the same code,lead is for leader and follow is for follower
  *
  *	I acknowledge all content contained herein, excluding template or example

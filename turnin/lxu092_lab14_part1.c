@@ -2,7 +2,7 @@
  *  Partner(s) Name: Luofeng Xu
  *	Lab Section:
  *	Assignment: Lab #  Exercise #
- *	Exercise Description: [optional - include for your own benefit]
+ *	Exercise Description: I've put two state machine in the same code,lead is for leader and follow is for follower
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
@@ -205,12 +205,6 @@ int Follow_Tick(int state){
 				temp=USART_Receive(0);			
 				PORTA=temp;
 			}
-			if((PORTB&0x01)==1){
-				PORTC=1;
-			}
-			else if ((PORTB&0x01)!=1){
-				PORTC=0;
-			}
                         break;
                 default:
 			state=led;
@@ -222,10 +216,7 @@ int Follow_Tick(int state){
 
 int main(void) {
 	initUSART(0);
-	USART_Flush(0);
 	DDRA=0xFF;PORTA=0x00;
-	DDRB=0x00;PORTB=0xFF;
-	DDRC=0xFF;PORTC=0x00;
 	unsigned char i=0;
 	tasks[i].state=led;
 	tasks[i].period=20;
